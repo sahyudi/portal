@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Beranda &mdash; Portal LMS Online</title>
+    <title>{{ $title }} &mdash; Portal LMS Online</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -51,13 +51,13 @@
                 <ul>
                     <li><a href="/" class="active">Beranda<br></a></li>
                     <li><a href="/services">Layanan</a></li>
-                    <li><a href="/informations">Informasi</a></li>
+                    {{-- <li><a href="/informations">Informasi</a></li> --}}
                     <li><a href="/contact">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="https://lms.bpbatam.go.id/apps/" target="_blank">Register</a>
+            {{-- <a class="btn-getstarted" href="https://lms.bpbatam.go.id/apps/" target="_blank">Register</a> --}}
 
         </div>
     </header>
@@ -67,7 +67,7 @@
         <!-- Hero Section -->
         <section id="hero" class="hero section">
 
-            <img src="assets/img/world-dotted-map.png" alt="" class="hero-bg" data-aos="fade-in">
+            <img src="assets/img/gedung-bida.png" alt="" class="hero-bg" data-aos="fade-in">
 
             <div class="container">
                 <div class="row gy-4 d-flex justify-content-between">
@@ -106,9 +106,9 @@
 
                     </div>
 
-                    <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+                    {{-- <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
                         <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="">
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -204,79 +204,24 @@
             <div class="container">
 
                 <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-1.jpg" alt="" class="img-fluid">
+                    @foreach ($services as $key => $service)
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card">
+                                {{-- <div class="card-img">
+                                    <img src="assets/img/service-1.jpg" alt="" class="img-fluid">
+                                </div> --}}
+                                <h3 class="mt-3">{{ $service->judul }}</h3>
+                                <p>{{ $service->deskripsi }}</p>
                             </div>
-                            <h3>Storage</h3>
-                            <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam
-                                repellendus temporibus itaqueofficiis odit</p>
                         </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-2.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Logistics</a></h3>
-                            <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt
-                                molestiae dolor ipsam ducimus occaecati nisi</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-3.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Cargo</a></h3>
-                            <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit
-                                doloremque oluptatem aut et molestiae ut et nihil</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-4.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Trucking</a></h3>
-                            <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit
-                                doloremque oluptatem aut et molestiae ut et nihil</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-5.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3>Packaging</h3>
-                            <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum
-                                onsequuntur maiores beatae consequatur magni voluptates</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-6.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Warehousing</a></h3>
-                            <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi
-                                quisquam aut nostrum unde et qui est non quo nulla</p>
-                        </div>
-                    </div><!-- End Card Item -->
-
+                        <!-- End Card Item -->
+                    @endforeach
                 </div>
 
-                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                <div class="row justify-content-center mt-3" data-aos="zoom-in" data-aos-delay="100">
                     <div class="col-xl-10">
                         <div class="text-center">
-                            <a class="cta-btn" href="/services">Read more</a>
+                            <a class="btn btn-primary" href="/services">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -373,23 +318,11 @@
                     <h4>Menu</h4>
                     <ul>
                         <li><a href="/">Beranda</a></li>
-                        {{-- <li><a href="#">About us</a></li> --}}
                         <li><a href="/services">Layanan</a></li>
-                        <li><a href="/informations">Informasi</a></li>
+                        {{-- <li><a href="/informations">Informasi</a></li> --}}
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-                {{-- 
-                <div class="col-lg-2 col-6 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                    </ul>
-                </div> --}}
 
                 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                     <h4>Kontak Kami</h4>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Beranda &mdash; Portal LMS Online</title>
+    <title>{{ $title }} &mdash; Portal LMS Online</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -51,13 +51,13 @@
                 <ul>
                     <li><a href="/">Beranda<br></a></li>
                     <li><a href="/services" class="active">Layanan</a></li>
-                    <li><a href="/informations">Informasi</a></li>
+                    {{-- <li><a href="/informations">Informasi</a></li> --}}
                     <li><a href="/contact">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="https://lms.bpbatam.go.id/apps/" target="_blank">Register</a>
+            {{-- <a class="btn-getstarted" href="https://lms.bpbatam.go.id/apps/" target="_blank">Register</a> --}}
 
         </div>
     </header>
@@ -66,7 +66,7 @@
     <main class="main">
 
         <!-- Page Title -->
-        <div class="page-title" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
+        <div class="page-title" data-aos="fade" style="background-image: url(assets/img/gedung-bida.png);">
             <div class="container position-relative">
                 <h1>Layanan</h1>
                 <p>Daftar layanan perizinan pertanahan yang diterbitkan oleh BP Batam.</p>
@@ -82,79 +82,28 @@
 
         <!-- Services Section -->
         <section id="services" class="services section">
-            <div class="container section-title" data-aos="fade-up">
+            {{-- <div class="container section-title" data-aos="fade-up">
                 <span>Our Services<br></span>
                 <h2>Our ServiceS</h2>
                 <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div>
+            </div> --}}
 
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-1.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3>Storage</h3>
-                            <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam
-                                repellendus temporibus itaqueofficiis odit</p>
-                        </div>
-                    </div>
+                    @foreach ($services as $key => $service)
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card">
+                                <h3 class="mt-3">{{ $service->judul }}</h3>
+                                <p>{{ $service->deskripsi }}</p>
+                                <p>
 
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-2.jpg" alt="" class="img-fluid">
+                                    <a href="/service/{{ $service->slug }}" class="py-4"><span>Detail </span><i
+                                            class="bi bi-arrow-right"></i></a>
+                                </p>
                             </div>
-                            <h3><a href="#" class="stretched-link">Logistics</a></h3>
-                            <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt
-                                molestiae dolor ipsam ducimus occaecati nisi</p>
                         </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-3.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Cargo</a></h3>
-                            <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit
-                                doloremque oluptatem aut et molestiae ut et nihil</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-4.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Trucking</a></h3>
-                            <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit
-                                doloremque oluptatem aut et molestiae ut et nihil</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-5.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3>Packaging</h3>
-                            <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum
-                                onsequuntur maiores beatae consequatur magni voluptates</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="assets/img/service-6.jpg" alt="" class="img-fluid">
-                            </div>
-                            <h3><a href="#" class="stretched-link">Warehousing</a></h3>
-                            <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi
-                                quisquam aut nostrum unde et qui est non quo nulla</p>
-                        </div>
-                    </div>
+                        <!-- End Card Item -->
+                    @endforeach
                 </div>
 
             </div>
@@ -186,9 +135,8 @@
                     <h4>Menu</h4>
                     <ul>
                         <li><a href="/">Beranda</a></li>
-                        {{-- <li><a href="#">About us</a></li> --}}
                         <li><a href="/services">Layanan</a></li>
-                        <li><a href="/informations">Informasi</a></li>
+                        {{-- <li><a href="/informations">Informasi</a></li> --}}
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>

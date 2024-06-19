@@ -39,7 +39,7 @@
   ======================================================== -->
 </head>
 
-<body class="contact-page">
+<body class="services-page">
 
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
@@ -50,14 +50,14 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="/">Beranda<br></a></li>
-                    <li><a href="/services">Layanan</a></li>
-                    <li><a href="/informations">Informasi</a></li>
-                    <li><a href="/contact" class="active">Contact</a></li>
+                    <li><a href="/services" class="active">Layanan</a></li>
+                    {{-- <li><a href="/informations">Informasi</a></li> --}}
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="https://lms.bpbatam.go.id/apps/" target="_blank">Register</a>
+            {{-- <a class="btn-getstarted" href="https://lms.bpbatam.go.id/apps/" target="_blank">Register</a> --}}
 
         </div>
     </header>
@@ -65,71 +65,44 @@
 
     <main class="main">
 
+
         <!-- Page Title -->
-        <div class="page-title" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
+        <div class="page-title" data-aos="fade" style="background-image: url(assets/img/gedung-bida.png);">
             <div class="container position-relative">
-                <h1>Kontak Kami</h1>
-                <p>Anda bisa menghubungi kami melalui kontak yang telah kami siapkan.</p>
+                <h1>{{ $service->judul }}</h1>
+                <p>{{ $service->deskripsi }}</p>
                 <nav class="breadcrumbs">
                     <ol>
-                        <li><a href="/">Beranda</a></li>
-                        <li class="current">Contact</li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Layanan</a></li>
+                        <li class="current">Detail Layanan</li>
                     </ol>
                 </nav>
             </div>
         </div><!-- End Page Title -->
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
+        <!-- Service Details Section -->
+        <section id="service-details" class="service-details section">
 
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <!-- End Google Maps -->
+            <div class="container">
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-4">
-                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                            <i class="bi bi-geo-alt flex-shrink-0"></i>
-                            <div>
-                                <h3>Alamat</h3>
-                                <p>Jl. Jend. Ibnu Sutowo No. 1 Batam Centre, Batam Kepulauan Riau, Indonesia, 29400</p>
-                            </div>
-                        </div><!-- End Info Item -->
 
-                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                            <i class="bi bi-telephone flex-shrink-0"></i>
-                            <div>
-                                <h3>Telpon</h3>
-                                <p>(0778) 462047 / 462048</p>
-                            </div>
-                        </div><!-- End Info Item -->
-
-                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                            <i class="bi bi-envelope flex-shrink-0"></i>
-                            <div>
-                                <h3>Email</h3>
-                                <p>humas@bpbatam.go.id</p>
-                            </div>
-                        </div><!-- End Info Item -->
-
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        {{-- <img src="assets/img/service-details.jpg" alt="" class="img-fluid services-img"> --}}
+                        <h3>Syarat
+                        </h3>
+                        <p>{!! $service->syarat !!}
+                        </p>
                     </div>
-
-                    <div class="col-lg-8">
-                        <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1185.949170602394!2d104.05204198560745!3d1.1305596615157594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98902eb3fd05b%3A0xff6505264b340a7a!2sBP%20BATAM!5e0!3m2!1sen!2sid!4v1718749643630!5m2!1sen!2sid"
-                                width="600" height="450" style="border:0; width: 100%; height: 270px;"
-                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                    <!-- End Contact Form -->
 
                 </div>
 
             </div>
 
-        </section><!-- /Contact Section -->
+        </section><!-- /Service Details Section -->
+
 
     </main>
 
@@ -157,7 +130,7 @@
                         <li><a href="/">Beranda</a></li>
                         {{-- <li><a href="#">About us</a></li> --}}
                         <li><a href="/services">Layanan</a></li>
-                        {{-- <li><a href="/informations">Informasi</a></li> --}}
+                        <li><a href="/informations">Informasi</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
