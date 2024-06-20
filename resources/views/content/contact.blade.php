@@ -81,13 +81,8 @@
 
         <!-- Contact Section -->
         <section id="contact" class="contact section">
-
             <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <!-- End Google Maps -->
-
                 <div class="row gy-4">
-
                     <div class="col-lg-4">
                         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                             <i class="bi bi-geo-alt flex-shrink-0"></i>
@@ -95,26 +90,22 @@
                                 <h3>Alamat</h3>
                                 <p>Jl. Jend. Ibnu Sutowo No. 1 Batam Centre, Batam Kepulauan Riau, Indonesia, 29400</p>
                             </div>
-                        </div><!-- End Info Item -->
-
+                        </div>
                         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                             <i class="bi bi-telephone flex-shrink-0"></i>
                             <div>
                                 <h3>Telpon</h3>
                                 <p>(0778) 462047 / 462048</p>
                             </div>
-                        </div><!-- End Info Item -->
-
+                        </div>
                         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
                             <i class="bi bi-envelope flex-shrink-0"></i>
                             <div>
                                 <h3>Email</h3>
                                 <p>humas@bpbatam.go.id</p>
                             </div>
-                        </div><!-- End Info Item -->
-
+                        </div>
                     </div>
-
                     <div class="col-lg-8">
                         <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
                             <iframe
@@ -123,13 +114,9 @@
                                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
-                    <!-- End Contact Form -->
-
                 </div>
-
             </div>
-
-        </section><!-- /Contact Section -->
+        </section>
 
     </main>
 

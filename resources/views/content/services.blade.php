@@ -82,12 +82,6 @@
 
         <!-- Services Section -->
         <section id="services" class="services section">
-            {{-- <div class="container section-title" data-aos="fade-up">
-                <span>Our Services<br></span>
-                <h2>Our ServiceS</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div> --}}
-
             <div class="container">
                 <div class="row gy-4">
                     @foreach ($services as $key => $service)
@@ -96,18 +90,14 @@
                                 <h3 class="mt-3">{{ $service->judul }}</h3>
                                 <p>{{ $service->deskripsi }}</p>
                                 <p>
-
                                     <a href="/service/{{ $service->slug }}" class="py-4"><span>Detail </span><i
                                             class="bi bi-arrow-right"></i></a>
                                 </p>
                             </div>
                         </div>
-                        <!-- End Card Item -->
                     @endforeach
                 </div>
-
             </div>
-
         </section>
         <!-- /Services Section -->
 
