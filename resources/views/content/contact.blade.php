@@ -51,13 +51,13 @@
                 <ul>
                     <li><a href="/">Beranda<br></a></li>
                     <li><a href="/services">Layanan</a></li>
-                    <li><a href="/informations">Informasi</a></li>
+                    {{-- <li><a href="/informations">Informasi</a></li> --}}
                     <li><a href="/contact" class="active">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="https://lms.bpbatam.go.id/apps/" target="_blank">Register</a>
+            {{-- <a class="btn-getstarted" href="https://lms.bpbatam.go.id/apps/" target="_blank">Register</a> --}}
 
         </div>
     </header>
