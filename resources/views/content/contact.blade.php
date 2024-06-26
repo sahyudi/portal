@@ -148,8 +148,7 @@
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-                {{-- 
-                <div class="col-lg-2 col-6 footer-links">
+                {{--  <div class="col-lg-2 col-6 footer-links">
                     <h4>Our Services</h4>
                     <ul>
                         <li><a href="#">Web Design</a></li>
