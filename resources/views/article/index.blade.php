@@ -14,8 +14,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-12">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <a href="{{ route('add-article') }}"
-                    class="inline-block mb-4 rounded-md px-4 py-2 bg-blue-500 text-white font-semibold transition hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Create
-                    Article</a>
+                    class="inline-block mb-4 rounded-md px-4 py-2 bg-blue-500 text-white font-semibold transition hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Tambah
+                    Artikel</a>
                 <div class="d-flex gap-3">
 
                     <table class="datatables mt-3 min-w-full bg-white border border-gray-300" style="width: 100%">

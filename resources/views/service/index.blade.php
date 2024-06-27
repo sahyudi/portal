@@ -14,7 +14,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-12">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <a href="{{ route('add-service') }}"
-                    class="inline-block mb-4 rounded-md px-4 py-2 bg-blue-500 text-white font-semibold transition hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Create
+                    class="inline-block mb-4 rounded-md px-4 py-2 bg-blue-500 text-white font-semibold transition hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Tambah
                     Layanan</a>
                 <div class="d-flex">
 

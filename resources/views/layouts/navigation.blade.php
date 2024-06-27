@@ -19,10 +19,10 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="url('/services')" :active="request()->routeIs('services')">
-                        {{ __('Services') }}
+                        {{ __('Layanan') }}
                     </x-nav-link>
                     <x-nav-link :href="url('/articles')" :active="request()->routeIs('articles')">
-                        {{ __('Articles') }}
+                        {{ __('Artikel') }}
                     </x-nav-link>
                 </div>
             </div>
