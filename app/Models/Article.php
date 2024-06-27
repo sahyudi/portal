@@ -9,5 +9,5 @@ class Article extends Model
 {
     use HasFactory;
 
-    public $fillable = ['title', 'content', 'slug'];
+    public $fillable = ['judul', 'content', 'slug'];
 }

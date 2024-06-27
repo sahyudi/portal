@@ -34,14 +34,14 @@ class ArticleController extends Controller
         // die;
 
         $validate =  $request->validate([
-            'title' => 'required',
+            'judul' => 'required',
             'content' => 'required',
         ]);
 
 
         Article::create([
-            'title' => $request->title,
-            'slug' => Str::slug($request->title),
+            'judul' => $request->judul,
+            'slug' => Str::slug($request->judul),
             'content' => $request->content,
         ]);
         return redirect()->route('articles')->with('success', 'Article created successfully.');
@@ -76,13 +76,13 @@ class ArticleController extends Controller
         }
 
         $request->validate([
-            'title' => 'required',
+            'judul' => 'required',
             'content' => 'required',
         ]);
 
         $article->update([
-            'title' => $request->title,
-            'slug' => Str::slug($request->title),
+            'judul' => $request->judul,
+            'slug' => Str::slug($request->judul),
             'content' => $request->content,
         ]);
 

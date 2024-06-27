@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -90,5 +91,19 @@ class HomeController extends Controller
         $data['service'] = Service::where(['slug' => $slug])->first();
         // dd($data['service']);
         return view('content.service-detail', $data);
+    }
+    public function articles()
+    {
+        $data['title'] = 'Daftar Artikel';
+        $data['articles'] = Article::all();
+        return view('content.articles', $data);
+    }
+
+    public function showArticles(string $slug)
+    {
+        $data['title'] = 'Detail Artikel';
+        $data['article'] = Article::where(['slug' => $slug])->first();
+        // dd($data['service']);
+        return view('content.article-detail', $data);
     }
 }

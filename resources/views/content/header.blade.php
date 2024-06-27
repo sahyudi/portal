@@ -8,7 +8,7 @@
              <ul>
                  <li><a href="/" class="active">Beranda<br></a></li>
                  <li><a href="/layanan">Layanan</a></li>
-                 {{-- <li><a href="/informations">Informasi</a></li> --}}
+                 <li><a href="/artikel">Artikel</a></li>
                  <li><a href="/kontak-kami">Kontak Kami</a></li>
              </ul>
              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

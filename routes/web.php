@@ -13,6 +13,8 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/kontak-kami', [HomeController::class, 'contact']);
 Route::get('/layanan', [HomeController::class, 'services']);
 Route::get('/detail-layanan/{slug}', [HomeController::class, 'showService']);
+Route::get('/artikel', [HomeController::class, 'articles']);
+Route::get('/detail-artikel/{slug}', [HomeController::class, 'showArticles']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

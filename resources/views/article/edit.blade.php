@@ -13,10 +13,10 @@
                     @method('put')
                     <input type="hidden" name="id" id="id" value="{{ $article->id }}">
                     <div>
-                        <x-input-label for="title" :value="__('Judul')" />
-                        <input id="title" name="title" type="text" class="mt-1 block w-full"
-                            value="{{ old('title', $article->title) }}" required autofocus autocomplete="title" />
-                        <x-input-error class="mt-2" :messages="$errors->get('title')" />
+                        <x-input-label for="judul" :value="__('Judul')" />
+                        <input id="judul" name="judul" type="text" class="mt-1 block w-full"
+                            value="{{ old('judul', $article->judul) }}" required autofocus autocomplete="judul" />
+                        <x-input-error class="mt-2" :messages="$errors->get('judul')" />
                     </div>
 
                     <div>
