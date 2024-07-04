@@ -62,6 +62,64 @@
 <!-- Preloader -->
 <div id="preloader"></div>
 
+<div id="contact_widget_substrate"></div>
+<div id="contact_widget_button" class="contact_widget_left d-flex align-items-center justify-content-center">
+    <div class="contact-widget-pulsation"></div>
+    <div class="contact-widget-icon text-center d-flex align-items-center justify-content-center"><i
+            class="fa fas fa-envelope"></i><span class="contact-widget-text d-none">Contact button</span></div>
+    <div class="contact-widget-dropdown d-flex flex-column align-items-start">
+        <!-- <a rel="noopener noreferrer" href="https://m.me/my-facebook-messenger" target="_blank" class="contact-widget-item d-flex align-items-center"><span class="contact-widget-item-icon contact-widget-messenger d-flex align-items-center justify-content-center"><i class="fab fa-facebook-messenger"></i></span><span>Messenger</span></a>		 -->
+        <a rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=6281364129386" target="_blank"
+            class="contact-widget-item d-flex align-items-center"><span
+                class="contact-widget-item-icon contact-widget-whatsapp d-flex align-items-center justify-content-center"><i
+                    class="fab fa-whatsapp"></i></span><span>WhatsApp</span></a>
+        <a rel="noopener noreferrer" href="https://t.me/+6281364129386" target="_blank"
+            class="contact-widget-item d-flex align-items-center"><span
+                class="contact-widget-item-icon contact-widget-telegram d-flex align-items-center justify-content-center"><i
+                    class="fab fa-telegram"></i></span><span>Telegram</span></a>
+
+        <a rel="noopener noreferrer" href="mailto:herupriyanto@gmail.com"
+            class="contact-widget-item d-flex align-items-center"><span
+                class="contact-widget-item-icon contact-widget-email d-flex align-items-center justify-content-center"><i
+                    class="far fa-envelope fa fa-envelope-open"></i></span><span>herupriyanto@gmail.com</span></a>
+        <a href="/kontak-kami" class="contact-widget-item d-flex align-items-center"><span
+                class="contact-widget-item-icon contact-widget-contacts d-flex align-items-center justify-content-center"><i
+                    class="fas fa fa-address-book"></i></span><span>Kontak Kami</span></a>
+    </div>
+</div>
+<!-- [END] Contact Widget Button -->
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet"
+    media="screen" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    /*********** [START] Contact widget button ***********/
+    $(document).ready(function() {
+        $('#contact_widget_button').on('click', function() {
+            $(this).toggleClass('clicked');
+            $('.contact-widget-dropdown').toggleClass('expanded');
+            $('.contact-widget-icon .fa-envelope, #back-top').toggleClass('d-none');
+            $('.contact-widget-icon .contact-widget-text').toggleClass('d-none');
+            $('#contact_widget_substrate').toggleClass('active');
+        });
+
+        $('#contact_widget_substrate').on('click', function() {
+            $(this).removeClass('active');
+            $('.contact-widget-dropdown').removeClass('expanded');
+            $('.contact-widget-icon .fa-envelope, #back-top').removeClass('d-none');
+            $('.contact-widget-icon .contact-widget-text').toggleClass('d-none');
+            $('#contact_widget_button').removeClass('clicked');
+        });
+
+        $('.contact-widget-dropdown').click(function(e) {
+            e.stopPropagation();
+        });
+    });
+    /*********** [END] Contact widget button ***********/
+</script>
+
+
+
 <!-- Vendor JS Files -->
 <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
